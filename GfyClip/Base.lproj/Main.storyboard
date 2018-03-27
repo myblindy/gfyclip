@@ -19,7 +19,7 @@
         <!--URL Entry-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="URL Entry" id="BYZ-38-t0r" customClass="ViewController" customModule="GfyClip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="URL Entry" id="BYZ-38-t0r" customClass="URLEntryViewController" customModule="GfyClip" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" textContentType="url"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="go" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
                                 <connections>
                                     <action selector="urlFieldEditingDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="z3u-Gk-OX6"/>
                                     <action selector="urlValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="uC9-UG-Zeh"/>
@@ -65,22 +65,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="120.4225352112676"/>
+            <point key="canvasLocation" x="532.5" y="120.4225352112676"/>
         </scene>
         <!--Clipping-->
         <scene sceneID="K23-T2-F14">
             <objects>
-                <viewController title="Clipping" id="SVG-AP-fl6" sceneMemberID="viewController">
+                <viewController title="Clipping" hidesBottomBarWhenPushed="YES" id="SVG-AP-fl6" customClass="ClippingViewController" customModule="GfyClip" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HCq-A1-pml">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="l4l-pM-AQO"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJr-eN-7gr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="521" y="120"/>
+            <point key="canvasLocation" x="1305" y="119.36619718309859"/>
         </scene>
     </scenes>
 </document>

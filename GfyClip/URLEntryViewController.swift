@@ -8,15 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class URLEntryViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var urlField: UITextField!
+    
+    var urlLocation = UrlLocation();
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func urlFieldEditingDidChange(_ sender: Any) {
-        startButton.isEnabled = urlField.text != nil && !urlField.text!.isEmpty
+        startButton.isEnabled = urlLocation.setUrl(urlString: urlField.text) != .Unknown
     }
 }

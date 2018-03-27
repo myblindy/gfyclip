@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		F92BDC2C2069D56C00C0DFC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92BDC2B2069D56C00C0DFC4 /* AppDelegate.swift */; };
-		F92BDC2E2069D56C00C0DFC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92BDC2D2069D56C00C0DFC4 /* ViewController.swift */; };
+		F92BDC2E2069D56C00C0DFC4 /* URLEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92BDC2D2069D56C00C0DFC4 /* URLEntryViewController.swift */; };
 		F92BDC312069D56C00C0DFC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92BDC2F2069D56C00C0DFC4 /* Main.storyboard */; };
 		F92BDC342069D56C00C0DFC4 /* GfyClip.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F92BDC322069D56C00C0DFC4 /* GfyClip.xcdatamodeld */; };
 		F92BDC362069D56C00C0DFC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F92BDC352069D56C00C0DFC4 /* Assets.xcassets */; };
 		F92BDC392069D56C00C0DFC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92BDC372069D56C00C0DFC4 /* LaunchScreen.storyboard */; };
+		F92BDC412069E96600C0DFC4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92BDC402069E96600C0DFC4 /* Utilities.swift */; };
+		F92BDC432069F02C00C0DFC4 /* UrlLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92BDC422069F02C00C0DFC4 /* UrlLocation.swift */; };
+		F92BDC472069F91B00C0DFC4 /* ClippingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92BDC462069F91B00C0DFC4 /* ClippingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F92BDC282069D56C00C0DFC4 /* GfyClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GfyClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92BDC2B2069D56C00C0DFC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F92BDC2D2069D56C00C0DFC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F92BDC2D2069D56C00C0DFC4 /* URLEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEntryViewController.swift; sourceTree = "<group>"; };
 		F92BDC302069D56C00C0DFC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F92BDC332069D56C00C0DFC4 /* GfyClip.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GfyClip.xcdatamodel; sourceTree = "<group>"; };
 		F92BDC352069D56C00C0DFC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F92BDC382069D56C00C0DFC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F92BDC3A2069D56C00C0DFC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F92BDC402069E96600C0DFC4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		F92BDC422069F02C00C0DFC4 /* UrlLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlLocation.swift; sourceTree = "<group>"; };
+		F92BDC462069F91B00C0DFC4 /* ClippingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClippingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +62,16 @@
 		F92BDC2A2069D56C00C0DFC4 /* GfyClip */ = {
 			isa = PBXGroup;
 			children = (
+				F92BDC462069F91B00C0DFC4 /* ClippingViewController.swift */,
 				F92BDC2B2069D56C00C0DFC4 /* AppDelegate.swift */,
-				F92BDC2D2069D56C00C0DFC4 /* ViewController.swift */,
+				F92BDC2D2069D56C00C0DFC4 /* URLEntryViewController.swift */,
 				F92BDC2F2069D56C00C0DFC4 /* Main.storyboard */,
 				F92BDC352069D56C00C0DFC4 /* Assets.xcassets */,
 				F92BDC372069D56C00C0DFC4 /* LaunchScreen.storyboard */,
 				F92BDC3A2069D56C00C0DFC4 /* Info.plist */,
 				F92BDC322069D56C00C0DFC4 /* GfyClip.xcdatamodeld */,
+				F92BDC402069E96600C0DFC4 /* Utilities.swift */,
+				F92BDC422069F02C00C0DFC4 /* UrlLocation.swift */,
 			);
 			path = GfyClip;
 			sourceTree = "<group>";
@@ -139,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F92BDC2E2069D56C00C0DFC4 /* ViewController.swift in Sources */,
+				F92BDC2E2069D56C00C0DFC4 /* URLEntryViewController.swift in Sources */,
 				F92BDC342069D56C00C0DFC4 /* GfyClip.xcdatamodeld in Sources */,
+				F92BDC412069E96600C0DFC4 /* Utilities.swift in Sources */,
+				F92BDC432069F02C00C0DFC4 /* UrlLocation.swift in Sources */,
+				F92BDC472069F91B00C0DFC4 /* ClippingViewController.swift in Sources */,
 				F92BDC2C2069D56C00C0DFC4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
