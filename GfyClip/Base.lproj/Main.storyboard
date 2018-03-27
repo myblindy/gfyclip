@@ -1,24 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--URL Entry-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="URL Entry" id="BYZ-38-t0r" customClass="ViewController" customModule="GfyClip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an URL to clip..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HkV-kP-6i6">
+                                <rect key="frame" x="16" y="268" width="234" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="oKz-kt-gwm"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" textContentType="url"/>
+                                <connections>
+                                    <action selector="urlFieldEditingDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="z3u-Gk-OX6"/>
+                                    <action selector="urlValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="uC9-UG-Zeh"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUF-Yl-e1f">
+                                <rect key="frame" x="258" y="269" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MUF-Yl-e1f" secondAttribute="height" multiplier="23:15" id="Jlj-Y4-NV6"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <segue destination="SVG-AP-fl6" kind="show" id="auZ-Ph-4W4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HkV-kP-6i6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3ma-ir-X1a"/>
+                            <constraint firstItem="HkV-kP-6i6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GKh-id-14n"/>
+                            <constraint firstItem="MUF-Yl-e1f" firstAttribute="leading" secondItem="HkV-kP-6i6" secondAttribute="trailing" constant="8" id="RQk-3x-QDu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MUF-Yl-e1f" secondAttribute="trailing" constant="16" id="rVI-Xz-160"/>
+                            <constraint firstItem="MUF-Yl-e1f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vAb-np-egp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="MUF-Yl-e1f" id="taV-xc-auA"/>
+                        <outlet property="urlField" destination="HkV-kP-6i6" id="feb-GP-6ZN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135" y="120.4225352112676"/>
+        </scene>
+        <!--Clipping-->
+        <scene sceneID="K23-T2-F14">
+            <objects>
+                <viewController title="Clipping" id="SVG-AP-fl6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HCq-A1-pml">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="l4l-pM-AQO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJr-eN-7gr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="120"/>
         </scene>
     </scenes>
 </document>
